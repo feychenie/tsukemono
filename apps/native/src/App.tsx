@@ -11,6 +11,9 @@ import { NativeBaseProvider, extendTheme, theme as nbTheme, Text } from 'native-
 import { SignInScreen } from 'screens/auth/SignIn';
 import { HomeScreen } from 'screens/Home';
 import { ProfileScreen } from 'screens/Profile';
+import { ShoppingListScreen } from 'screens/ShoppingList';
+import { ReceipesScreen } from 'screens/Receipes';
+import { NotesScreen } from 'screens/Notes';
 
 // SplashScreen.preventAutoHideAsync();
 
@@ -56,6 +59,13 @@ export default function App() {
                   {() => (
                     <Tabs.Navigator>
                       <Tabs.Screen name="Home" component={HomeScreen} />
+                      <Tabs.Screen name="Notes" component={NotesScreen} />
+                      <Tabs.Screen
+                        name="ShoppingList"
+                        component={ShoppingListScreen}
+                        options={{ title: 'Groceries' }}
+                      />
+                      <Tabs.Screen name="Receipes" component={ReceipesScreen} />
                       <Tabs.Screen name="Profile" component={ProfileScreen} />
                     </Tabs.Navigator>
                   )}
